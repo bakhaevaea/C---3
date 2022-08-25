@@ -6,17 +6,10 @@ class MyNewClass
     static void Main()
     {
 
-        Console.WriteLine("Введите координаты 1 точки (x, y, z)");
-        int x1= Convert.ToInt32(Console.ReadLine());
-        int y1= Convert.ToInt32(Console.ReadLine());
-        int z1= Convert.ToInt32(Console.ReadLine());
-        
-        Console.WriteLine("Введите координаты 2 точки (x, y, z)");
-        int x2= Convert.ToInt32(Console.ReadLine());
-        int y2= Convert.ToInt32(Console.ReadLine());
-        int z2= Convert.ToInt32(Console.ReadLine());
-        
-        task21(x1, y1, z1, x2, y2, z2);
+        Console.WriteLine("Введите число");
+        int number= Convert.ToInt32(Console.ReadLine());
+
+        task23(number);
     }
 
 // Напишите программу, которая принимает на
@@ -48,4 +41,16 @@ class MyNewClass
         double AB = Math.Sqrt(Math.Pow((x1-x2), 2) + Math.Pow((y1-y2), 2) + Math.Pow((z1-z2), 2));
         Console.WriteLine($"AB = {AB}");
     }
+
+    //Задача 23. Напишите программу, которая принимает на
+    //вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+    public static void task23(int num)
+    {
+        for(int i=1; i<=num; i++ )
+        {
+            Console.Write($"{i*i*i} ");
+        }
+        
+    }
 }
+
